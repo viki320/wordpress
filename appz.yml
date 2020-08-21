@@ -1,0 +1,44 @@
+app:
+  name: wordpress
+  code: wordpress
+  notify: appzdev@cloudbourne.co
+
+build:
+  version: 5.4
+  env: DEV
+  build_file: none
+  output_files: output/*.zip
+  image_template: wordpress-5.4
+  image_name: alpha/wordpress
+
+deploy:
+  context: alpha/DEV
+  replicas: 1
+  
+volumes:
+- claim: wordpress-data
+  mount: /appz/data
+  name: data
+
+monitor:
+  notify: appzops@cloudbourne.co      
+
+properties:
+  MYSQL_USER: wordpress
+  MYSQL_DATABASE: wordpress
+  ADMIN_USER: cloudbourne
+  SITE_URL: http://127.0.0.1
+  MYSQL_HOST: mariadb:3306
+  WP_DEBUG: true
+  SITE_TITLE: demo.cloudcontrol.com
+  MYSQL_PASSWORD:
+     vault: MYSQL_PASSWORD_KEY
+  ADMIN_PASSWORD:
+     vault: ADMIN_PASSWORD_KEY
+  SITE_PRIVATE_KEY:
+     vault: SITE_PRIVATE_KEY
+  SITE_CERT:
+     vault: SITE_CERT
+  APPZ_ENV: NTNX
+  ENABLE_HA: yes
+  revision : 01
