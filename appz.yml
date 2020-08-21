@@ -32,11 +32,11 @@ properties:
   MYSQL_DATABASE: wordpress
   ADMIN_USER: cloudbourne
   ADMIN_EMAIL: akanade@cloudcontrol.com
-  SITE_URL: https://installerdemo.appzdemo.com/
-  SITE_TITLE: demo.cloudcontrol.com
+  SITE_URL: "https://installerdemo.appzdemo.com/"
+  SITE_TITLE: "demo.cloudcontrol.com"
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD_KEY
   ADMIN_PASSWORD:
      vault: ADMIN_PASSWORD_KEY
-  ENABLE_HA: yes
+  ENABLE_HA: "yes"
   revision : 03
