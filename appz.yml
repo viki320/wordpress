@@ -26,8 +26,8 @@ monitor:
   notify: appzops@cloudbourne.co      
 
 properties:
-  MYSQL_MASTER_HOST : "mariadb_master-10.4:3306"
-  MYSQL_SLAVE_HOST : "mariadb_slave-10.4:3306"
+  MYSQL_MASTER_HOST : "mariadb-master-10-4:3306"
+  MYSQL_SLAVE_HOST : "mariadb-slave-10-4:3306"
   MYSQL_USER: wordpress
   MYSQL_DATABASE: wordpress
   ADMIN_USER: cloudbourne
