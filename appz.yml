@@ -1,7 +1,7 @@
 app:
   name: wordpress
   code: wordpress
-  notify: akanade@ecloudcontrol.com
+  notify: appzdev@cloudbourne.co
 
 build:
   version: 5.4
@@ -31,8 +31,8 @@ properties:
   MYSQL_USER: wordpress
   MYSQL_DATABASE: wordpress
   ADMIN_USER: cloudbourne
-  ADMIN_EMAIL: akanade@eagleinvsys.com
-  SITE_URL: https://installerdemo.ecloudcontrol.com/
+  ADMIN_EMAIL: akanade@cloudcontrol.com
+  SITE_URL: https://installerdemo.appzdemo.com/
   SITE_TITLE: demo.cloudcontrol.com
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD_KEY
