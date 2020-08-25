@@ -19,7 +19,7 @@ deploy:
   
 volumes:
 - claim: wordpress-data
-  mount: /appz/data
+  mount: /var/www/html/wp-content/uploads
   name: data
 
 monitor:
