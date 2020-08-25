@@ -33,7 +33,7 @@ properties:
   MYSQL_DATABASE: wordpress
   ADMIN_USER: cloudbourne
   ADMIN_EMAIL: psganni@cloudcontrol.com
-  SITE_URL: "https://wordpress-5-4.appzdemo.com/"
+  SITE_URL: "https://wordpress-5-4.appzclient.com/"
   SITE_TITLE: "Wordpress AppZ Installer Demo"
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD_KEY
