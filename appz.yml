@@ -14,6 +14,7 @@ build:
 deploy:
   context: alpha/DEV
   replicas: 1
+  type: statefulset
   port:
   - 443
   - 80
@@ -22,6 +23,9 @@ volumes:
 - claim: wordpress-data
   mount: /var/www/html/wp-content/uploads
   name: data
+  size: 5Gi
+  mode: ReadWriteOnce
+  class: microk8s-hostpath
 
 monitor:
   notify: appzops@cloudbourne.co      
