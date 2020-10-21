@@ -44,4 +44,4 @@ properties:
   ADMIN_PASSWORD:
      vault: ADMIN_PASSWORD_KEY
   ENABLE_HA: "yes"
-  revision : 73
+  revision : 74
