@@ -36,9 +36,8 @@ properties:
   MYSQL_USER: wordpress
   MYSQL_DATABASE: wordpress
   ADMIN_USER: cloudbourne
-  ADMIN_EMAIL: akanade@cloudcontrol.com
-  SITE_URL: "https://hellowordpress.appzclient.com"
-  SITE_TITLE: "Wordpress AppZ Installer Demo"
+  ADMIN_EMAIL: akanade@ecloudcontrol.com
+  SITE_TITLE: "Wordpress AppZ Demo"
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD_KEY
   ADMIN_PASSWORD:
