@@ -9,7 +9,6 @@ build:
   build_file: none
   output_files: output/*.zip
   image_template: wordpress-5.4
-  image_name: alpha/wordpress
 
 deploy:
   context: alpha/DEV
@@ -17,18 +16,12 @@ deploy:
   type: statefulset
   port:
   - 443
-  - 80
   
 volumes:
 - claim: wordpress-data
   mount: /var/www/html/wp-content/uploads
   name: data
-  size: 5Gi
-  mode: ReadWriteOnce
-  class: microk8s-hostpath
-
-monitor:
-  notify: appzops@cloudbourne.co      
+  size: 5Gi   
 
 properties:
   MYSQL_MASTER_HOST : "mariadb-master-10-4:3306"
@@ -36,9 +29,9 @@ properties:
   MYSQL_USER: wordpress
   MYSQL_DATABASE: wordpress
   ADMIN_USER: cloudbourne
-  ADMIN_EMAIL: psganni@cloudcontrol.com
-  SITE_URL: "https://hellowordpress.appzclient.com"
-  SITE_TITLE: "Wordpress AppZ Installer Demo"
+  ADMIN_EMAIL: appzdev@cloudbourne.co
+  SITE_URL: "https://hellowordpress.<GIT-ID>.appzdemo.com"
+  SITE_TITLE: "Wordpress AppZ Workshop Demo"
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD_KEY
   ADMIN_PASSWORD:
