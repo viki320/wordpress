@@ -15,7 +15,7 @@ deploy:
   replicas: 1
   type: statefulset
   port:
-  - 443
+  - 80
   
 volumes:
 - claim: wordpress-data
