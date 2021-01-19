@@ -4,11 +4,11 @@ app:
   notify: appzdev@cloudbourne.co
 
 build:
-  version: 5.4
+  version: 5.5
   env: DEV
   build_file: none
   output_files: output/*.zip
-  image_template: wordpress-5.4
+  image_template: wordpress-5.5
 
 deploy:
   context: alpha/DEV
