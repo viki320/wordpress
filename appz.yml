@@ -24,7 +24,7 @@ volumes:
   size: 5Gi   
 - claim: wordpress-backup
   mount: /appz/backup
-  name: data
+  name: backup
   size: 5Gi 
   
 properties:
