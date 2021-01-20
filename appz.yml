@@ -20,7 +20,7 @@ deploy:
 volumes:
 - claim: wordpress-data
   mount: /var/www/html/wp-content/uploads
-  name: data
+  name: uploads
   size: 5Gi   
 - claim: wordpress-backup
   mount: /appz/backup
