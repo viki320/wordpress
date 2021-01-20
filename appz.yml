@@ -22,7 +22,11 @@ volumes:
   mount: /var/www/html/wp-content/uploads
   name: data
   size: 5Gi   
-
+- claim: wordpress-backup
+  mount: /appz/backup
+  name: data
+  size: 5Gi 
+  
 properties:
   ENABLE_HA: "no"  
   #if HA is disabled
