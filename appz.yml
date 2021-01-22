@@ -1,7 +1,7 @@
 app:
   name: wordpress
   code: wordpress
-  notify: krishnan.rejith@gmail.com
+  notify: appzdev@cloudbourne.co
 
 build:
   version: 5.5
@@ -11,7 +11,7 @@ build:
   image_template: wordpress-5.5
 
 deploy:
-  context: rejith/DEV
+  context: alpha/DEV
   replicas: 1
   type: statefulset
   port:
@@ -37,7 +37,7 @@ properties:
   MYSQL_USER: wordpress
   MYSQL_DATABASE: wordpress
   ADMIN_USER: wpadmin
-  ADMIN_EMAIL: krishnan.rejith@gmail.com
+  ADMIN_EMAIL: appzdev@cloudbourne.co
   SITE_TITLE: "Wordpress AppZ Workshop Demo"
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD_KEY
