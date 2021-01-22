@@ -1,7 +1,7 @@
 app:
   name: wordpress
   code: wordpress
-  notify: appzdev@cloudbourne.co
+  notify: vignesh@nainatechnologies.com.
 
 build:
   version: 5.5
@@ -11,7 +11,7 @@ build:
   image_template: wordpress-5.5
 
 deploy:
-  context: alpha/DEV
+  context: viki/DEV
   replicas: 1
   type: statefulset
   port:
